@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="./styles.css">
+
+    <script src="./script.js"></script>
+</head>
+<body>
+    <div class="form-container-wrapper">
+        <div id="myform" class="form-container">
+            <h2 class="form-heading">Registration Form</h2>
+
+            <div id="validationMsg">
+                <h3 id="vmsg" class="error-msg"></h3>
+            </div>
+
+            <label for="name">Name:</label>
+            <input id="name" type="text" placeholder="Name" oninput="validateName()"/> <br />
+            <span id="nameErr" style="color: brown;display: none;">Enter a valid name</span>
+
+            <label for="age">Age:</label>
+            <input id="age" type="number" placeholder="Age" /> <br />
+            <span id="ageErr" style="color: brown;display: none;">Enter a valid age</span>
+
+
+            <label for="role">Role:</label>
+            <select id="role">
+                <option value="" selected>None</option>
+                <option value="Trainer">Trainer</option>
+                <option value="Developer">Developer</option>
+                <option value="Tester">Tester</option>
+            </select><br><br>
+
+            <label for="salary">Salary:</label>
+            <input id="salary" type="text" placeholder="Salary" /> <br />
+
+            <label for="email">Email ID:</label>
+            <input id="email" type="email" placeholder="Email" /> <br />
+            <span id="emailErr" style="color: brown;display: none;">Enter a valid Email</span>
+
+            <label for="phone">Phone Number:</label>
+            <input id="phone" type="text" placeholder="Phone number" /> <br />
+            <span id="phoneErr" style="color: brown;display: none;">Enter a valid phone number</span>
+
+            <button id="submit" onclick="submit()">Submit</button>
+        </div>
+    </div>
+
+</body>
+</html>

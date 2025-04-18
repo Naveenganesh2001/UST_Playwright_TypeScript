@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Details</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="dashboard">
+        <header>
+            <h1>Submitted Details</h1>
+            <h2><span id="ownerDisplay"></span></h2>
+        </header>
+        <main>
+            <div class="details-container">
+                <h2>Form Information</h2>
+                <div class="detail-item">
+                    <strong>Name:</strong> <span id="nameDisplay"></span>
+                </div>
+                <div class="detail-item">
+                    <strong>Age:</strong> <span id="ageDisplay"></span>
+                </div>
+                <div class="detail-item">
+                    <strong>Role:</strong> <span id="roleDisplay"></span>
+                </div>
+                <div class="detail-item">
+                    <strong>Salary:</strong> <span id="salaryDisplay"></span>
+                </div>
+                <div class="detail-item">
+                    <strong>Email:</strong> <span id="emailDisplay"></span>
+                </div>
+                <div class="detail-item">
+                    <strong>Phone Number:</strong> <span id="phoneDisplay"></span>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        const name = localStorage.getItem("name");
+        const age = localStorage.getItem("age");
+        const role = localStorage.getItem("role");
+        const salary = localStorage.getItem("salary");
+        const email = localStorage.getItem("email");
+        const phone = localStorage.getItem("phone");
+        const owner = localStorage.getItem("owner");
+
+        document.getElementById("nameDisplay").textContent = name;
+        document.getElementById("ageDisplay").textContent = age;
+        document.getElementById("roleDisplay").textContent = role;
+        document.getElementById("salaryDisplay").textContent = salary;
+        document.getElementById("emailDisplay").textContent = email;
+        document.getElementById("phoneDisplay").textContent = phone;
+        document.getElementById("ownerDisplay").textContent = owner;
+    </script>
+
+</body>
+</html>

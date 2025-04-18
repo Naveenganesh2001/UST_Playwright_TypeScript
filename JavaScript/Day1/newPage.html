@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 15px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <h2>Submitted JSON Data</h2>
+
+    <!-- Placeholder for the JSON data -->
+    <pre id="jsonData"></pre>
+
+    <script>
+        // Retrieve the JSON string from localStorage
+        const userDetailsString = localStorage.getItem('userDetails');
+
+        if (userDetailsString) {
+            // Parse the JSON string into a JavaScript object
+            const userDetails = JSON.parse(userDetailsString);
+
+            // Display the JSON data in the <pre> tag in a formatted way
+            document.getElementById('jsonData').textContent = JSON.stringify(userDetails, null, 4);
+        } else {
+            // If no data is found in localStorage, show a message
+            document.getElementById('jsonData').textContent = 'No data found.';
+        }
+    </script>
+</body>
+</html>
