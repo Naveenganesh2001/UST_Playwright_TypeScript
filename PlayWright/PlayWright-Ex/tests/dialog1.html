@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dialog Example</title>
+</head>
+<body style="display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0;">
+
+    <button id="nextPageButton" style="padding: 10px 20px; font-size: 16px; cursor: pointer;">NextPage</button>
+
+    <script>
+        document.getElementById('nextPageButton').addEventListener('click', function() {
+            if (confirm("It's moving to the next page. Do you want to proceed?")) {
+                window.open('http://127.0.0.1:5500/tests/Dialog2.html', '_blank');
+            }
+        });
+    </script>
+
+</body>
+</html>
